@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-08-26T22:14:05.084Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" etag="0RPRQg0nkoovMYufvf2o" version="13.6.5" type="github">
+<mxfile host="app.diagrams.net" modified="2020-08-27T02:04:50.340Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" etag="9VSI3cywmVaDzWEAYOQu" version="13.6.5" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
     <mxGraphModel dx="1184" dy="741" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -19,7 +19,7 @@
         <mxCell id="sg8UIlXDy95VCHJpMV4Q-7" value="Organizations" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#FFE599;" vertex="1" parent="1">
           <mxGeometry x="430" y="30" width="160" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="sg8UIlXDy95VCHJpMV4Q-8" value="+name&#xa;+admins[...userId]&#xa;+managers[...userId]&#xa;+users[...userId]&#xa;+teams[" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="sg8UIlXDy95VCHJpMV4Q-7">
+        <mxCell id="sg8UIlXDy95VCHJpMV4Q-8" value="+name&#xa;+admins[...userId]&#xa;+managers[...userId]&#xa;+users[...userId]&#xa;+teams[...teamId]" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="sg8UIlXDy95VCHJpMV4Q-7">
           <mxGeometry y="30" width="160" height="150" as="geometry" />
         </mxCell>
         <mxCell id="sg8UIlXDy95VCHJpMV4Q-10" value="" style="endArrow=ERoneToMany;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endFill=0;" edge="1" parent="1" source="sg8UIlXDy95VCHJpMV4Q-8" target="sg8UIlXDy95VCHJpMV4Q-2">
@@ -28,14 +28,8 @@
             <mxPoint x="500" y="290" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="sg8UIlXDy95VCHJpMV4Q-11" value="Teams" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#FFE599;" vertex="1" parent="1">
-          <mxGeometry x="540" y="290" width="160" height="180" as="geometry" />
-        </mxCell>
-        <mxCell id="sg8UIlXDy95VCHJpMV4Q-12" value="+orgId&#xa;+title&#xa;+managers[...userId]&#xa;+members[...userId]" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="sg8UIlXDy95VCHJpMV4Q-11">
-          <mxGeometry y="30" width="160" height="150" as="geometry" />
-        </mxCell>
         <mxCell id="sg8UIlXDy95VCHJpMV4Q-15" value="users entity could be denormalized to contain user Info" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;size=30;position=0.08;position2=0;base=10;align=left;" vertex="1" parent="1">
-          <mxGeometry x="630" y="30" width="190" height="100" as="geometry" />
+          <mxGeometry x="610" y="10" width="190" height="100" as="geometry" />
         </mxCell>
         <mxCell id="sg8UIlXDy95VCHJpMV4Q-16" value="" style="endArrow=ERoneToMany;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endFill=0;" edge="1" parent="1" source="sg8UIlXDy95VCHJpMV4Q-2" target="sg8UIlXDy95VCHJpMV4Q-3">
           <mxGeometry relative="1" as="geometry">
@@ -53,6 +47,14 @@
           <mxGeometry x="140" y="30" width="160" height="180" as="geometry" />
         </mxCell>
         <mxCell id="sg8UIlXDy95VCHJpMV4Q-2" value="+firstName&#xa;+lastName&#xa;+email&#xa;+hashPassword&#xa;+orgId" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="sg8UIlXDy95VCHJpMV4Q-1">
+          <mxGeometry y="30" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="sg8UIlXDy95VCHJpMV4Q-11" value="Teams" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#FFE599;" vertex="1" parent="1">
+          <mxGeometry x="610" y="240" width="160" height="180" as="geometry">
+            <mxRectangle x="540" y="290" width="70" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sg8UIlXDy95VCHJpMV4Q-12" value="+orgId&#xa;+title&#xa;+managers[...userId]&#xa;+members[...userId]" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="sg8UIlXDy95VCHJpMV4Q-11">
           <mxGeometry y="30" width="160" height="150" as="geometry" />
         </mxCell>
       </root>
